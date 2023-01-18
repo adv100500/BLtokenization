@@ -16,15 +16,15 @@ https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65
 
 finally, the script will deploy the BL smart contract:
 
-https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L10
+https://github.com/adv100500/BLtokenization/blob/c5de9382181289472f58cf6aa72ab19057329640/contracts/SimpleNFT.sol#L9
 
 and mint the tokenized BL to the deployer address with the function awardItem:
 
-https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L32
+https://github.com/adv100500/BLtokenization/blob/c5de9382181289472f58cf6aa72ab19057329640/contracts/SimpleNFT.sol#L30
 
 As you might have seen, the deployer of the contract is the only authorized account for minting:
 
-https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L17-L20
+https://github.com/adv100500/BLtokenization/blob/c5de9382181289472f58cf6aa72ab19057329640/contracts/SimpleNFT.sol#L16-L19
 
 therefore, two additional functions were added to grant / revoke minter roles:
 
