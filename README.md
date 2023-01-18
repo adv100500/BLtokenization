@@ -28,7 +28,7 @@ https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65
 
 therefore, two additional functions were added to grant / revoke minter roles:
 
-https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L22-L29
+https://github.com/adv100500/BLtokenization/blob/118b7f092d00ff67602a91a68a8c416ce658cb1a/contracts/SimpleNFT.sol#L21-L27
 
 Once the script is deployed, we connect the wallet of the minter account on openSea to see the result:
 
