@@ -2,14 +2,36 @@
 
 This is a simple example of tokenization of bill of lading with ERC721 token standard.
 
-First we will store scanned bill of lading (image/BL.png) with NFT storage on IPFS, then we will upload the bill of lading metadata on IPFS. 
+Please insert your API key of NFT storage:
 
-The NFT metadata is generated directly in the deployment script (scripts/StoreDeploy.js) and looks like this:
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/scripts/StoreDeploy.js#L4
 
-![BLdetails](https://user-images.githubusercontent.com/121932525/213190232-f0a3134f-28e1-4197-bebd-f79dfbe1af3f.png)
+Next, the script will store scanned bill of lading with NFT storage on IPFS:
 
-1) replace the API key of NFT storage with your API key in line 4 of the deployment script:
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/scripts/StoreDeploy.js#L9
 
-![code](https://user-images.githubusercontent.com/121932525/213191410-69fe87ba-f67d-41c3-b7ca-a6e2a444533a.png)
+the script will upload the bill of lading metadata on IPFS. The metadata is generated directly in the deployment script and looks like this:
 
-2) Launch the deployment script on your preferred network (goerli testnet used in this case) with the command "npx hardhat run test/StoreDeploy.js --network testnet"
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/scripts/StoreDeploy.js#L38-L69
+
+finally, the script will deploy the BL smart contract:
+
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L10
+
+and mint the tokenized BL to the deployer address with the function awardItem:
+
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L32
+
+As you might have seen, the deployer of the contract is the only authorized account for minting:
+
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L17-L20
+
+therefore, two additional functions were added to grant / revoke minter roles:
+
+https://github.com/adv100500/BLtokenization/blob/5d3013c4271b1e698f6dd01a9f6ee65e7fa4a8b0/contracts/SimpleNFT.sol#L22-L29
+
+Once the script is deployed, we connect the wallet of the minter account on openSea to see the result:
+
+![BLosea](https://user-images.githubusercontent.com/121932525/213199823-1ed15ae0-5c04-4a73-bf54-c1661317fd48.png)
+
+
