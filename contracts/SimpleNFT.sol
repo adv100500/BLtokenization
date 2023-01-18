@@ -23,7 +23,6 @@ contract BLNFT is ERC721URIStorage, AccessControl {
     }
 
     function revokeRoleMint(address payable _account) public onlyRole(DEFAULT_ADMIN_ROLE) {
-  
     revokeRole(MINTER_ROLE, _account);
     }
 
